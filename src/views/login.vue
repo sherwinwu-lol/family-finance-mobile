@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import basic from "@/api/basic";
+import {login} from "@/api/basic";
 
 export default {
   name: "login",
@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     onSubmit: function () {
-      basic.login(this.form)
+      login(this.form)
         .then(res => {
           this.res = res;
           this.$store.commit('login', {

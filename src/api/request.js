@@ -1,5 +1,6 @@
 import axios from 'axios';
 import qs from 'qs';
+import {currUserInfo} from "../utils/auth";
 
 export const doExec = (url, params, contentType, methods) => {
     let pstr = qs.stringify(params, {
@@ -30,18 +31,24 @@ export const doExec = (url, params, contentType, methods) => {
     })
 
 };
+import auth from '../utils/auth'
 // http request 拦截器
 axios.interceptors.request.use(
     config => {
         // if (getUserInfo()) { // 每次发送请求之前判断是否存在token，如果存在，则统一在http请求的header都加上token，不用每次请求都手动添加了
         //     config.headers.Authorization = getUserInfo() ? getUserInfo().Authorization : null;
         // }
+        if (!store.state.user) {
+          store.state.user = auth.getCurrUserInfo();
+        }
         return config;
     },
     error => {
         return Promise.reject(error);
     }
 );
+import store from "@/store/index.js";
+import {currUserInfo} from "./basic";
 
 
 //http response 拦截器
