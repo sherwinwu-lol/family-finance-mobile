@@ -1,19 +1,14 @@
 # family-finance-web
 
-## Project setup
-```
-npm install
-```
+## 做个总结
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. 遇到不熟悉的代码怎么办?例如vuex
+    首先不要想当然,先搞清楚怎么配置,又如何使用,必要的话画出模型.  
+    最好有个正确的示例  
+2. 遇到报错或者结果与预期不符怎么办?
+    你凭什么能得出预期的结果呢?把这些省略的过程缓缓补上,看看自己遗漏了什么
+3. 是该面向过程呢?还是该面向对象呢?
+    面向对象吧
+4. 对事物整体要有个把握!
+    比如vue router是整个项目的地图  
+    比如数据存储的地方有哪些  
