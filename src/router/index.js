@@ -6,7 +6,7 @@ const router = createRouter({
   history: createWebHashHistory(),  // hash 模式
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: defineAsyncComponent(() => import(`../views/home.vue`)),
       meta: {
@@ -28,7 +28,7 @@ const router = createRouter({
     },
     {
       path: '/*',
-      redirect: '/',
+      redirect: '/home',
     },
   ]
 })
